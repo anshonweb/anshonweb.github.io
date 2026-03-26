@@ -1,31 +1,43 @@
-ansh website
+# ansh.
 
-personal site and blog in one repo
+> A minimalist personal site and blog, bundled into one single deployment.
 
-routes
+## 🗺️ Routes
 
-/ portfolio
-/blog post list
-/blog/[slug] individual post
+- **`/`** — Main portfolio and minimalist Matrix visualizer.
+- **`/blog`** — Full directory list of all published posts.
+- **`/blog/[slug]`** — Individual dynamic markdown blog post pages.
 
-setup
+## ⚡ Setup
 
+Clone the repository and install the standard dependencies:
+
+```bash
 npm install
 npm run dev
+```
 
-writing a post
+## ✍️ Writing a Post
 
-drop a .md file in /posts/
+To effortlessly publish a new article, simply drop a standard `.md` Markdown file natively into the `/posts/` directory.
 
+Use this format at the top of the file:
+
+```markdown
+---
 title: my post title
 date: 2026-03-27
+---
 
-content here...
+Your content goes here...
+```
 
-filename becomes the url slug, example: my-post.md becomes /blog/my-post
+The flat filename automatically becomes the exact URL slug on the website. 
+*(Example: a file named `my-post.md` intelligently routes directly to `/blog/my-post`)*
 
-customise
+## 🎨 Customization
 
-color in app/globals.css
-links in app/components/navigation.tsx
-name/prompt in footer and blog pages
+You can seamlessly customize the entire platform:
+- **Color Accent** — Modify the `--accent` token globally inside `app/globals.css`.
+- **Navigation Links** — Swap out the connection URLs natively in `app/components/navigation.tsx`.
+- **Prompt Tag** — Change the `ansh@unreal:~#` footer signature directly across `app/page.tsx`, `app/blog/page.tsx`, and `app/blog/[slug]/page.tsx`.
