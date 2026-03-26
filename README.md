@@ -1,51 +1,31 @@
-# www
+ansh website
 
-personal site + blog — one repo, one deployment.
+personal site and blog in one repo
 
-## routes
+routes
 
-- `/` — portfolio
-- `/blog` — post list
-- `/blog/[slug]` — individual post
+/ portfolio
+/blog post list
+/blog/[slug] individual post
 
-## setup
+setup
 
-```bash
 npm install
 npm run dev
-```
 
-## writing a post
+writing a post
 
-drop a `.md` file in `/posts/`:
+drop a .md file in /posts/
 
-```markdown
----
 title: my post title
 date: 2026-03-27
----
 
 content here...
-```
 
-filename becomes the url slug: `my-post.md` → `/blog/my-post`
+filename becomes the url slug, example: my-post.md becomes /blog/my-post
 
-## ascii art
+customise
 
-```bash
-pip install Pillow
-python scripts/ascii_convert.py --input yourimage.png --width 120 --output out.txt
-```
-
-## deploying to vercel
-
-1. push repo to github
-2. import to vercel — no config needed
-3. deploy
-
-## customise
-
-- **color** — `--accent` in `app/globals.css`
-- **links** — `links` array in `app/page.tsx`
-- **name/prompt** — footer in `app/page.tsx`, `app/blog/page.tsx`, `app/blog/[slug]/page.tsx`
-- **image** — replace `public/photo.avif`, update `src` in `app/page.tsx`
+color in app/globals.css
+links in app/components/navigation.tsx
+name/prompt in footer and blog pages
