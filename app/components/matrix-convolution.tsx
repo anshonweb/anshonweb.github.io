@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const INPUT_SIZE = 8;
 const KERNEL_SIZE = 3;
@@ -115,7 +116,7 @@ export default function MatrixConvolution() {
       </div>
 
       <div style={{ flexBasis: "100%", textAlign: "center", color: "var(--text-dim)", fontSize: "0.7rem", marginTop: "-1.5rem", opacity: 0.6, letterSpacing: "0.05em" }}>
-        Visualizing a discrete convolution. Click anywhere to randomize the array.
+        Visualizing a discrete convolution. <Link href="/blog/discrete-convolutions" style={{ textDecoration: "underline", color: "var(--accent)" }}>Read more</Link>
       </div>
     </div>
   );
